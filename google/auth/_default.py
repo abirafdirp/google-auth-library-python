@@ -296,8 +296,8 @@ def default(scopes=None, request=None):
         os.environ.get(environment_vars.LEGACY_PROJECT))
 
     checkers = (
-        _get_explicit_environ_credentials,
-     )
+        _get_gcloud_sdk_credentials,
+    )
 
     for checker in checkers:
         credentials, project_id = checker()
